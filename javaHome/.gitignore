@@ -1,0 +1,77 @@
+/bin/
+# ==========================================
+# Java 표준 빌드 산출물 (Compiled class files)
+# ==========================================
+*.class
+*.log
+*.ctxt
+*.jar
+*.war
+*.nar
+*.ear
+*.zip
+*.tar.gz
+*.rar
+
+# 빌드 폴더 (Build directories)
+bin/
+build/
+out/
+target/
+
+# ==========================================
+# IntelliJ IDEA 설정 파일
+# ==========================================
+.idea/
+*.iml
+*.iws
+*.ipr
+out/
+
+# ==========================================
+# Eclipse 설정 파일
+# ==========================================
+.metadata/
+.classpath
+.project
+.settings/
+*.launch
+
+# ==========================================
+# 빌드 도구 (Maven / Gradle) 관련 파일
+# ==========================================
+# Maven
+.mvn/
+target/
+
+# Gradle
+.gradle/
+build/
+/gradlew
+/gradlew.bat
+/gradle/wrapper/gradle-wrapper.properties
+/gradle/wrapper/gradle-wrapper.jar
+
+# ==========================================
+# 운영체제(OS) 및 시스템 임시 파일
+# ==========================================
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# ==========================================
+# 중요 보안 및 환경 설정 파일 (가장 중요)
+# ==========================================
+# 데이터베이스 비밀번호나 API 키가 들어가는 파일은 절대 올리면 안 되네
+*.env
+*.properties
+*.yml
+*.yaml
+# (주의: 만약 프로젝트 기본 설정이 담긴 application.yml 등은 예외로 두고 싶다면 
+#  보안이 필요한 핵심 파일만 .env 등으로 분리하는 것이 좋다네.)
