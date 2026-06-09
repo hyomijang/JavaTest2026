@@ -2,6 +2,8 @@ package javaHome;
 
 import java.util.Scanner;
 
+import javaH01.Student;
+
 public class JavaHome {
 	static Scanner scan = new Scanner (System.in);
 	public static void main(String[] args) {
@@ -12,6 +14,7 @@ public class JavaHome {
 			int no = Integer.parseInt(scan.nextLine());
 			switch (no) {
 			case 1:
+				stundentpractice();
 				break;
 			case 2:
 				break;
@@ -35,6 +38,10 @@ public class JavaHome {
 		}
 		System.out.println("The end");
 		
+	}
+	private static void stundentpractice() {
+		Student stundent = new Student(null, null, 0, 0, 0);
+		System.out.println("");
 	}
 
 }

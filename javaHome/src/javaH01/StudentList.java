@@ -1,5 +1,10 @@
 package javaH01;
 
-public class StudentList {
+public class StudentList extends Student{
+	
+	public  addStudent(Student student) {
+		
+	}
+	
 
 }
