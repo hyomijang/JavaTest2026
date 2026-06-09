@@ -73,7 +73,7 @@ public class Student{
 	}
 	//이퀄스 해시코드
 	
-	//tostring
+	
 	@Override
 	public String toString() {
 		return "Student [studentId=" + studentId + ", name=" + name + ", sum=" + sum + ", scores=" + scores

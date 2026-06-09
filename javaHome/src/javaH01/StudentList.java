@@ -2,9 +2,8 @@ package javaH01;
 
 public class StudentList extends Student{
 	
-	public  addStudent(Student student) {
-		
-	}
+	//public  addStudent(Student student) {}
 	
-
 }
+
+
