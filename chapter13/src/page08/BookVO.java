@@ -1,5 +1,7 @@
 package page08;
 
+import java.util.Objects;
+
 public class BookVO {
 	private String title;
 	private String genre;
@@ -38,6 +40,23 @@ public class BookVO {
 
 	public void setRentCount(int rentCount) {
 		this.rentCount = rentCount;
+	}
+	
+	@Override
+	public boolean equals(Object obj) {
+		if(!(obj instanceof BookVO)) {
+			return false;
+		}
+		BookVO bv = (BookVO)obj;
+		if (this.title.equals(bv.title)&& this.genre.equals(bv.genre)) {
+			return true;
+		}
+		return false;
+	}
+	
+	@Override
+	public int hashCode() {
+		return Objects.hash(title,genre);
 	}
 
 	public String infrom() {
