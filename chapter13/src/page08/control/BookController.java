@@ -29,16 +29,32 @@ public class BookController {
 			sum += bArr[i].getRentCount();
 		}
 		return sum;
-
+		
 	}
 
 	// 총계와 평균값을 double[]
 	public double[] avgRentCount() {
-		
+
 		double[] sumAndAvg = new double[2];
 		sumAndAvg[0] = (double) sumRentCount();
 		sumAndAvg[1] = (double) sumRentCount() / bArr.length;
 		return sumAndAvg;
 	}
+	//도서 대여 카운트 중심으로 내림차순으로 정렬하시오
+	//원본을 사용해서 정렬하는 방법으로 처리한다.
+	public BookVO[] bookRank() {
+		 for (int j = 0; j < bArr.length - 1; j++) {
+			 for (int i = j; i < bArr.length; i++) {
+				 if(bArr[j].getRentCount() < bArr[i].getRentCount()) {
+					 BookVO buffer = bArr[j];
+					 bArr[j] = bArr[i];
+					 bArr[i] = buffer;
+				 }
+			 	}
+			
+	 		}
+			return bArr;
+		}
+	}
 
-}
+
