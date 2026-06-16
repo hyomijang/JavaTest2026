@@ -1,12 +1,15 @@
 package practice01.view;
 
+//import java.util.Iterator;
+
 import practice01.model.Book;
-import practice01.run1.Run;
 import pratice01.controller.Bookcontroller;
+import run.Run;
 
 
 
-//컨트
+//컨트롤러,북 불러오기
+//무한루프 메뉴 만들기
 public class BookMenu {
 	private Bookcontroller bc = new Bookcontroller();
 		public Book book = new Book();
@@ -14,7 +17,7 @@ public class BookMenu {
 			
     		boolean exitFlag = false;
     		while(!exitFlag) {
-    			
+    			;
     		System.out.println("1.도서정보출력,2.대여통계 출력,3.도서등급판별,4.도서정보정렬,5.메인화면");
     		System.out.print("1~5번선택>");
     		int no = Integer.parseInt(Run.scan.nextLine());
@@ -55,13 +58,17 @@ public class BookMenu {
     			
     		case 4:
     			System.out.println("========== 도서 정보 정렬 ==========");
-    			Book[] bArr = bc.bookRank();
-    			for (Book book1 : bArr) {
-					System.out.println(book1.toString());
+    			Book[] bArr = bc.bookRank(); 
+    			for (int i = 0; i < bArr.length; i++) {
+					System.out.println(bArr[i].toString());
 				}
+				/*
+				 * for (Book book1 : bArr) { System.out.println(book1.toString()); }
+				 */
     			break;
     		case 5:
     			System.out.println("========== 도서 정보 페이지 종료 ==========");
+    			exitFlag = true;
     			break;
     		default:
     			System.out.println("잘못된 입력값입니다.");

@@ -14,7 +14,7 @@ public class Run {
 		 no = Integer.parseInt(scan.nextLine());
 		 switch (no) {
 		case 1:
-			BookMenu bcm = new BookMenu();
+			practice01.view.BookMenu bcm = new practice01.view.BookMenu();
 			bcm.bookDisplay();
 			break;
 		case 2:
