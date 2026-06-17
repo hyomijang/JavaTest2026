@@ -42,5 +42,10 @@ public class Run {
 		aList6.add("5");
 		Object[] oArray =  aList6.toArray(new String[0]);
 		System.out.println(Arrays.toString(oArray));
+		
+		if(aList6.contains("2") == true) {
+			System.out.println("있엉");
+		}
+		
 	}
 }
