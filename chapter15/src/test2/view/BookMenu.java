@@ -14,19 +14,19 @@ public class BookMenu {
 
 		boolean exitFlag = false;
 		while (!exitFlag) {
-			System.out.println("1.정보출력,2.합산,3.평균,4.등급판별,5.정렬,6.검색,7.home");
+			System.out.println("1.정보입력,2.정보출력,3.합산/평균,4.등급판별,5.정렬,6.검색,7.home");
 			int no = Integer.parseInt(Run.scan.nextLine());
 			switch (no) {
 			case 1:
+				System.out.println("========== 대여 정보 입력 ==========");
+				insertBook();
+				break;
+			case 2:
 				System.out.println("========== 도서 정보 출력 ==========");
 				printBook();
 				break;
-			case 2:
-				System.out.println("========== 대여 합산 출력 ==========");
-				sumRentCount();
-				break;
 			case 3:
-				System.out.println("========== 대여 평균 출력 ==========");
+				System.out.println("========== 대여 합산/평균 출력 ==========");
 				avgRentCount();
 				break;
 			case 4:
@@ -53,6 +53,10 @@ public class BookMenu {
 		}
 	}
 
+	private void insertBook() {
+		bc.insertBook();
+	}
+
 	private void bookseller() {
 		Book[] seller = bc.bookSeller();
 		for (Book book : seller) {
@@ -77,6 +81,7 @@ public class BookMenu {
 
 	private void avgRentCount() {
 		double[] avgArr = bc.avgRentCount();
+		System.out.printf("총 대여수 :%d \n", (int)avgArr[0]);
 		System.out.printf("총 대여수 평균 :%5.1f \n", avgArr[1]);
 	}
 

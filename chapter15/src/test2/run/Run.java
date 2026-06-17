@@ -15,7 +15,6 @@ public class Run {
 			switch (no) {
 			case 1:
 				book();
-				
 				break;
 			case 2:
 				System.out.println("해당 내용은 준비중입니다.");

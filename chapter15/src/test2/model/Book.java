@@ -17,10 +17,10 @@ public class Book {
 		this.genre = genre;
 		this.rentCount = rentCount;
 	}
-	public Book(String title) {
-		this.title = title;
-		this.genre = genre;
-		this.rentCount = rentCount;
+	public Book(Book book) {
+		this.title = book.title;
+		this.genre = book.genre;
+		this.rentCount = book.rentCount;
 	}
 	
 	public String getBmSeller() {
