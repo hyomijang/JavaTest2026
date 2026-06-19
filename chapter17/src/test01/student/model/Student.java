@@ -1,8 +1,9 @@
 package test01.student.model;
 
 import java.util.Collection;
+import java.util.Objects;
 
-public class Student implements Collection<Student>{
+public class Student implements Comparable<Student>{
 	private String name;
 	private int id;
 	private int kor;
@@ -11,20 +12,27 @@ public class Student implements Collection<Student>{
 	private int total;
 	private double avg;
 	private int rank;
+	
 	public Student() {
-		this(null,0,0,0,0,0,0.0,0);
+		this(null,0,0,0,0);
 	}
-	public Student(String name, int id, int kor, int eng, int math, int total, double avg, int rank) {
+	public Student(String name, int id, int kor, int eng, int math) {
 		super();
 		this.name = name;
 		this.id = id;
 		this.kor = kor;
 		this.eng = eng;
 		this.math = math;
-		this.total = total;
-		this.avg = avg;
-		this.rank = rank;
+		caclulateTotalAvg ();
 	}
+	
+	private void caclulateTotalAvg() {
+		this.total = this.kor + this.eng + this.math ;
+		this.avg = Math.round((this.total / 3.0) * 100) / 100.0;
+	
+		
+	}
+	
 	public Student(Student st) {
 		super();
 		this.name = st.name;
@@ -87,10 +95,22 @@ public class Student implements Collection<Student>{
 	
 	@Override
 	public boolean equals(Object obj) {
-		if(obj instanceof Student)
+		if(obj instanceof Student) {
 			Student student = (Student)obj;
-		return (Student.name.equals(student.name)&& student == id())?
+		return (student.name.equals(this.name)&& student.id == (this.id))? true : false;
+		}
+		return false;
 	}
+	@Override
+	public int hashCode() {
+		return Objects.hash(name,id);
+	}
+	@Override
+	public int compareTo(Student o) {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+	
 	
 	
 
