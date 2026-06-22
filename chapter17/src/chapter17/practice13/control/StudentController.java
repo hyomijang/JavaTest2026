@@ -9,7 +9,7 @@ import chapter17.practice13.model.StudentVO;
 
 public class StudentController {
 	private List<StudentVO> sL;
-	private List<StudentVO> csL;
+	private List<StudentVO> csL;//Shellow copy
 
 	public StudentController() {
 		sL = new ArrayList<StudentVO>();

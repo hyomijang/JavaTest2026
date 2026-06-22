@@ -37,7 +37,7 @@ public class Run {
 		String message = dis.readUTF();
 		System.out.println(message + "<<new>>");
 		// 3. 서버는 오더진행.
-		dos.writeUTF(message + "<<Accept>>");
+		dos.writeUTF(sendmessage + "<<Accept>>");
 		dos.flush();
 	}
 
