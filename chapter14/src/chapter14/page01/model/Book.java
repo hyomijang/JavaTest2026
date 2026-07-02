@@ -53,7 +53,7 @@ public class Book {
 			return false;
 		}
 		
-		Exception
+		
 		
 		@Override
 		public int hashCode() {

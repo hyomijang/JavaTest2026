@@ -1,16 +1,16 @@
 package chapter15.practice01.view;
 
+import java.util.List;
 import java.util.Scanner;
-import practice2.controller.Controller;
-import practice2.model.Student;
-
+import chapter15.practice01.controller.StundentController;
+import chapter15.practice01.model.Student;
 public class StudentMenu {
 
     private Scanner scan = new Scanner(System.in);
     private StundentController sc = new StundentController();
     private Object avg;
 
-    public void bookDisplay() {
+    public void studentDisplay() {
         boolean exitFlag = false;
         while (!exitFlag) {
             System.out.println("\n========== 학생 관리 프로그램 ==========");
@@ -85,7 +85,7 @@ private void insertStudent() {
     }
 
     private void searchStudent() {
-        searchStudentNoName(String name, String no);
+      
 
     }
 

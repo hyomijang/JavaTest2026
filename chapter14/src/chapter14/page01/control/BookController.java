@@ -11,7 +11,7 @@ public class BookController {
 	// 스테딕 파이널 상수값
 	//배열값 + 책 최대값주기
 	
-	public Bookcontroller() {
+	public void Bookcontroller() {
 		bArr = new Book[BOOK_COUNT];
 		bArr[0] = new Book() ;
 	}

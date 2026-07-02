@@ -6,6 +6,7 @@ package view;
 
 import page08.BookVO;
 import page08.control.BookController;
+import run.Run;
 
 
 
@@ -20,7 +21,7 @@ import page08.control.BookController;
 	    		while(!exitFlag) {
 	    		System.out.println("1.도서정보출력,2.대여통계 출력,3.도서등급판별,4.도서정보정렬,5.메인화면");
 	    		System.out.print("1~5번선택>");
-	    		int no = Integer.parseInt(scan.nextLine());
+	    		int no = Integer.parseInt(Run.scan.nextLine());
 	    		switch (no) {
 	    		case 1:
 	    			System.out.println("========== 도서 정보 출력 ==========");
